@@ -89,7 +89,7 @@ Ooh, into the blue
 		tt.style.height = Math.random()*500+"px";	
 		tt.style.left =Math.random()* 100 + "%";		
 		tt.style.opacity =Math.random()*0.9;		
-			
+		tt.style.transform ="rotate("+Math.random()*360  + "deg)";				
 		tt.style.background = "white";
 		document.body.appendChild(tt);
 	}
@@ -98,10 +98,10 @@ Ooh, into the blue
 		var ww = xf.cloneNode(true);
 		ww.id = b;
 		ww.style.animationDuration = randomBH(5, 20)+"s";	
-		ww.style.width = Math.random()*700+"px";
+		ww.style.width = Math.random()*700+"%";
 		ww.style.height = Math.random()*500+"px";	
 		ww.style.left =Math.random()* 100 + "%";
-		ww.style.top =Math.random()* 100 + "%";				
+		ww.style.top =Math.random()* 100 + "%";						
 		ww.style.opacity =Math.random()*1;		
 
 		document.body.appendChild(ww);
