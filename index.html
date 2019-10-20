@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+@font-face { font-family: 'DungGeunMo'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff'); font-weight: normal; font-style: normal; }	
+		body{ background:white; }
+		.rain{width:10px; height: 10px; opacity: 0; top: -80%;
+				background:blue; overflow: hidden;
+				position: absolute;
+animation: rr 2s ease-in infinite;}
+		@keyframes rr{
+			from{ top: -500px; }
+			to{ top: 1000px;}
+		}
+		@keyframes slidein {
+ 		 from {
+ 	  	 left: 100%;
+ 	  	 width: 300%
+		  }
+
+ 		 to {
+		    left: 0%;
+			width: 20%;
+			  }
+			}
+
+		p { font-family: 'DungGeunMo'; line-height: 2;  word-spacing: -1px; word-break: keep-all; font-size: 13px;  position: absolute; 
+  			animation: slidein 5s infinite alternate;
+ 				  
+	}			
+		.gain{width:10px; height: 10px; top: -80%;
+				background:white; overflow: hidden;
+				position: absolute;
+				animation: cr 2s alternate infinite;}
+		@keyframes cr{
+			from{ top: 0px; }
+			to{ top: 1000px;}
+		}
+
+
+		.uni{left: 40%; width: 200px; top: 40% ;  
+				overflow: hidden;
+				position: absolute;
+				animation: fr 12s forwards infinite;}
+		@keyframes fr{
+			from{transform: rotate(0deg); }
+			to{transform: rotate(360deg); }
+
+	.vk {background: white; color: black;}
+
+	</style>
+</head>
+<body style="overflow: hidden; background: black; width: 100%;">
+	<div class="rain" id="rrr"></div>
+	
+	<div class="gain" id="bbb"></div>	
+	
+	<div> <img src="universe.gif" id="uuu" class="uni"></div>
+	<div><p id="xf"><span style="background: white;">I'll be your mermaid, caught on your rod
+나는 당신의 낚싯줄에 걸려든 인어가 될 거야
+
+Coming for your aid, isn't it odd?
+도움을 청하러 오다니, 이상하지 않니?
+
+Isn't it silly, now that you know?
+어리석은 짓을 했다는걸, 이젠 당신도 알겠지?
+
+Someone this slippery, can't let you go
+아무리 재빠르다 해도, 난 당신을 놓아줄 수 없어
+
+It's true, you know that I would jump too
+맞아, 나도 같이 뛰어내릴 거라는 걸 당신도 알잖아
+
+You know that I would jump too
+난 당신과 함께 뛰어내릴 거야
+
+Ooh, into the blue
+푸른 바닷속으로</span></p></div>
+
+
+
+	<script>
+	for(var i=0; i<10; i++){
+		var tt = rrr.cloneNode(true);
+		tt.id = i;
+		tt.style.animationDuration = randomBH(5, 20)+"s";
+		tt.style.animationDelay = i*0.1 + "s";		
+		tt.style.width = Math.random()*500+"px";
+		tt.style.height = Math.random()*500+"px";	
+		tt.style.left =Math.random()* 100 + "%";		
+		tt.style.opacity =Math.random()*0.9;		
+			
+		tt.style.background = "white";
+		document.body.appendChild(tt);
+	}
+
+	for(var b=0; b<10; b++){
+		var ww = xf.cloneNode(true);
+		ww.id = b;
+		ww.style.animationDuration = randomBH(5, 20)+"s";	
+		ww.style.width = Math.random()*500+"px";
+		ww.style.height = Math.random()*500+"px";	
+		ww.style.left =Math.random()* 100 + "%";
+		ww.style.top =Math.random()* 100 + "%";				
+		ww.style.opacity =Math.random()*1;		
+
+		document.body.appendChild(ww);
+	}
+
+
+	for(var t=0; t<300; t++){
+		var xx = bbb.cloneNode(true);
+		xx.id = t;
+		xx.style.animationDuration = randomBH(0, 3)+"s";
+		xx.style.animationDelay = t*0.1 + "s";		
+		var dd = Math.random()*5 + "px";
+		xx.style.width = dd;
+		xx.style.height = dd;	
+		xx.style.top =Math.random()* 100 + "%";		
+		xx.style.left =Math.random()* 100 + "%";		
+		xx.style.opacity =1;		
+
+		document.body.appendChild(xx);
+	}
+
+
+	//rgb(32,45,64)
+
+	
+	function rgbmake(){
+		var a = Math.random()*255;
+		var b = Math.random()*255;
+		var c = Math.random()*255;
+		var d ="rgb("+a+","+b+","+c+")";
+		return d;
+	}
+
+	function randomBH(min, max) {
+	  min = Math.ceil(min);
+	  max = Math.floor(max);
+	  return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+	</script>
+</body>
+</html>
